@@ -4,7 +4,7 @@ model:
         image_key: image
         hparams:
             image_size: 32
-            patch_size: 4
+            patch_size: 8
             dim: 768
             depth: 12
             heads: 12
@@ -25,16 +25,16 @@ model:
 dataset:
     target: enhancing.dataloader.DataModuleFromConfig
     params:
-        batch_size: 20
-        num_workers: 8
+        batch_size: 8
+        num_workers: 4
         train:
-            target: enhancing.dataloader.imagenet.ImageNetTrain
+            target: enhancing.dataloader.classimage.ClassImageTrain
             params:
-                root: data/ilsvrc2012
-                resolution: 256
+                root: /home/brans/repos/spaces_dataset-master/data/800/scene_066/cam_04/
+                resolution: 32
 
         validation:
-            target: enhancing.dataloader.imagenet.ImageNetValidation
+            target: enhancing.dataloader.classimage.ClassImageValidation
             params:
-                root: data/ilsvrc2012
-                resolution: 256
+                root: /home/brans/repos/spaces_dataset-master/data/800/scene_066/cam_04/
+                resolution: 32

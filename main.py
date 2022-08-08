@@ -18,7 +18,7 @@ if __name__ == '__main__':
     parser.add_argument('-c', '--config', type=str, required=True)
     parser.add_argument('-s', '--seed', type=int, default=0)
     parser.add_argument('-nn', '--num_nodes', type=int, default=1)
-    parser.add_argument('-ng', '--num_gpus', type=int, default=1)
+    parser.add_argument('-ng', '--num_gpus', type=int, default=2)
     parser.add_argument('-u', '--update_every', type=int, default=1)
     parser.add_argument('-e', '--epochs', type=int, default=100)
     parser.add_argument('-lr', '--base_lr', type=float, default=4.5e-6)
